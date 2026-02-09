@@ -8,11 +8,13 @@ class Login extends Controller
     }
     public function prosesLogin()
     {
-        if ($row = $this->model('LoginModel')->checkLogin($_POST) > 0) {
+        $row = $this->model('LoginModel')->checkLogin($_POST);
+        if ($row) {
             $_SESSION['username'] = $row['username'];
             $_SESSION['nama'] = $row['nama'];
             $_SESSION['session_login'] = 'sudah_login';
             header('location: ' . base_url . '/home');
+            exit;
         } else {
             Flasher::setMessage('Username / Password', 'salah.', 'danger');
             header('location: ' . base_url . '/login');

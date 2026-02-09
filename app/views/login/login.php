@@ -29,7 +29,7 @@
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Silahkan login terlebih dahulu.</p>
+                <p class="login-box-msg">Silahkan login terlebih dahulu.</p> pass : admin123
                 <form action="<?= base_url; ?>/login/prosesLogin" method="post">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="ketikkan username.."
